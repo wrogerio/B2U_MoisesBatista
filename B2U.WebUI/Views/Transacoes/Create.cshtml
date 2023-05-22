@@ -1,0 +1,91 @@
+﻿@model Transacao
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Transacoes/transacoes-create.css" />
+}
+
+<!-- Header -->
+<div class="row mb-3">
+    <h2 class="fw-light">Cadastro de Transações</h2>
+</div>
+
+<!-- Formulário de cadastro -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header text-light fw-bold">
+                <h5 class="fw-lighter m-0 py-1">Formulário de cadastro</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create" asp-controller="Transacoes" method="post" id="frmCadastroTransacao">
+                    <input type="hidden" id="contaId" asp-for="ContaId" />
+                    <div class="row gx-2">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label>Histórico</label>
+                                <input class="form-control" asp-for="Historico" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label>Data</label>
+                                <input class="form-control dataFiltro" asp-for="Data" type="date" />
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-group">
+                                <label>Débito</label>
+                                <input class="form-control" asp-for="Debito" type="number" />
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-group">
+                                <label>Crédito</label>
+                                <input class="form-control" asp-for="Credito" type="number" disabled />
+                            </div>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start align-items-center">
+                            <label class="form-check-label ms-2 me-2">Débito</label>
+                            <input class="form-check-input me-3" type="checkbox" checked id="chkDebito" />
+
+                            <label class="form-check-label me-2">Crédito</label>
+                            <input class="form-check-input" type="checkbox" id="chkCredito" />
+                        </div>
+                    </div>
+                    <div class="row gx-2">
+                        <div class="col-10">
+                            <label>Categoria</label>
+                            <select class="form-control" asp-items="@ViewBag.Categorias" asp-for="CategoriaId">
+                                <option>Selecione...</option>
+                            </select>
+                        </div>
+
+                        <div class="col-2 d-flex justify-content-start align-items-center">
+                            <label class="form-check-label ms-2 me-3">Conciliado?</label>
+                            <input class="form-check-input" type="checkbox" asp-for="Conciliado" />
+                        </div>
+
+                    </div>
+                    <div class="row gx-2">
+                        <div class="col">
+                            <label>Notas</label>
+                            <textarea class="form-control" asp-for="Notas" rows="4"></textarea>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="d-flex align-items-center mt-3">
+                    <button class="btn btn-success me-3" id="btnSubmitTransacao">Cadastrar <i class="fas fa-plus ms-2 text-light"></i></button>
+                    <form asp-action="Index" asp-controller="Transacoes">
+                        <input type="hidden" name="contaId" id="contaIdVoltar" />
+                        <button class="btn btn-danger" type="submit">Fechar <i class="fas fa-times ms-2 text-light"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Transacoes/transacoes-create.js"></script>
+}

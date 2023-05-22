@@ -1,0 +1,23 @@
+﻿@using System.Globalization;
+@model Transacao
+
+@{
+    string tipoRegistro = "";
+    tipoRegistro = Model.Debito > 0 ? "text-danger" : "text-primary";
+}
+
+<tr>
+    <td class="py-2">@Model.Data.ToShortDateString()</td>
+    <td>@Model.Historico</td>
+    <td class="@tipoRegistro">
+        @if (Model.Debito > 0)
+        {
+            @Model.Debito.ToString("C", CultureInfo.CurrentCulture) <i class="fas fa-arrow-down ms-2"></i>
+        }
+        else if (Model.Credito > 0)
+        {
+            @Model.Credito.ToString("C", CultureInfo.CurrentCulture)  <i class="fas fa-arrow-up ms-2"></i>
+        }
+    </td>
+</tr>
+

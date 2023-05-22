@@ -1,0 +1,14 @@
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\bin\Debug\net6.0\B2U.DAL.deps.json
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\bin\Debug\net6.0\B2U.DAL.runtimeconfig.json
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\bin\Debug\net6.0\B2U.DAL.dll
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\bin\Debug\net6.0\B2U.DAL.pdb
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.csproj.AssemblyReference.cache
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.AssemblyInfoInputs.cache
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.AssemblyInfo.cs
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.csproj.CoreCompileInputs.cache
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.dll
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\refint\B2U.DAL.dll
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.pdb
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\B2U.DAL.genruntimeconfig.cache
+C:\Users\batis\OneDrive\Área de Trabalho\B2U_Teste\b2u_Moiza\B2U.DAL\obj\Debug\net6.0\ref\B2U.DAL.dll

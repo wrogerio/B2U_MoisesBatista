@@ -1,0 +1,75 @@
+﻿@using System.Globalization;
+@model IEnumerable<Transacao>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Transacoes/transacoes-index.css" />
+}
+
+<!-- Formulário de pesquisa por data -->
+<form id="frmSearchData" class="text-light" asp-action="Index" asp-controller="Transacoes" method="get">
+    <input type="hidden" name="contaId" id="contaId" />
+
+    <div class="row">
+        <div class="col">
+            @if (ViewBag.UltimosTrintaDias != "")
+            {
+                <h6><span class="badge bg-danger bg-opacity-75">@ViewBag.UltimosTrintaDias</span></h6>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-md-8 col-sm-12 col-lg-5">
+            <div class="form-group d-flex align-items-center">
+                <input class="form-control me-4 dataFiltro" type="date" name="dtInicio" id="dtInicio" />
+                <button id="btnSubmitFrmFiltroData" type="submit" class="btn btn-sm me-3 d-flex align-items-center text-light">Pesquisar <i class="fas fa-search ms-2 text-light"></i></button>
+                <a asp-action="Create" asp-controller="Transacoes" class="btn btn-success btn-sm d-flex align-items-center">Cadastrar <i class="fas fa-plus ms-2 text-light"></i></a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<hr />
+
+<!-- Informativos da conta -->
+<div class="row">
+    <div class="col-4 col-lg-4 text-start">
+        <h5>Extrato da Conta: <span id="codigoConta"></span> - <span id="nomeConta"></span></h5>
+        <h6>A partir de: @ViewBag.DataExtrato</h6>
+    </div>
+
+    <div class="col-8 col-lg-8 text-end">
+        @if (ViewBag.SaldoTotal != null)
+        {
+            var tipoClasse = ViewBag.SaldoTotal < 0 ? "bg-danger" : "";
+            <h4><span class="badge badge-saldo @tipoClasse bg-opacity-75">Saldo @ViewBag.SaldoTotal.ToString("C", CultureInfo.CurrentCulture)</span></h4>
+        }
+    </div>
+</div>
+
+<hr />
+
+<!-- Tabela de transações -->
+<div class="row">
+    <div class="col-12 text-end">
+        <table id="tableTransacoes" class="table table-sm fw-bold">
+            <thead class="text-light">
+                <tr>
+                    <th>Data</th>
+                    <th>Histórico</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                   <partial name="components/_transacaoValor" for="@item"/>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Transacoes/transacoes-home.js"></script>
+}

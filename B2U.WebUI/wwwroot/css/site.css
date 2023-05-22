@@ -1,0 +1,43 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Load da página com o logo da empresa */
+.loadPage {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: #003042;
+    border-radius: 15px;
+    width: 200px;
+    height: 130px;
+    z-index: 999;
+}
+@keyframes loadPage {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+.navbar {
+    border-bottom: none!important;
+}
+
+.custom-navbar {
+    background-color: #003042;
+}
+
+

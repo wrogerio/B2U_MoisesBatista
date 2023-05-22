@@ -1,0 +1,48 @@
+﻿@section Styles {
+    <link href="~/css/Home/home.css" rel="stylesheet" />
+}
+
+<!-- Header -->
+<div class="row mb-1">
+    <div class="col-12 text-center text-light" style="margin-top: -20px;">
+        <h1 class="fw-bold disp display-3">B2U SISTEMAS. <i class="fal fa-laptop-code ms-2"></i></h1>
+    </div>
+</div>
+
+<!-- Botão Pesquisar -->
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-md text-light" id="btnOpenModalSelectContas">Nova Consulta <i class="fas fa-search ms-1 me-1"></i></button>
+    </div>
+</div>
+
+<!-- Modal Contas -->
+<dialog id="modalSelectContas" class="border-0 modalSelectContas">
+    <form id="frmSelectContas" asp-action="Index" asp-controller="Transacoes">
+        <div class="row text-center">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="fw-bold">Selecione uma conta para obter o extrato.</label>
+                    <select class="form-control mt-3" id="contaId" name="contaId" asp-items="@ViewBag.Contas">
+                        <option>Selecione...</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mt-2">
+                <div class="form-group">
+                    <button class="btn btn-primary btn-sm" id="btnSubmitFormSelectContas">Pesquisar <i class="fas fa-search ms-2 text-light"></i></button>
+                    <span id="btnCloseModalSelectContas" class="btn btn-danger btn-sm">Fechar <i class="fas fa-times text-light"></i></span>
+                </div>
+            </div>
+        </div>
+    </form>
+</dialog>
+
+<!-- Particulas -->
+<div id="particles" style="height:80vh; min-width:100vw; margin-left: -150px; position: relative; z-index: -999; margin-top: -150px;"></div>
+
+@section Scripts {
+    <script src="~/js/Home/home.js"></script>
+}

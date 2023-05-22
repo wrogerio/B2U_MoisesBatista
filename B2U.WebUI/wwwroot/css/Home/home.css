@@ -1,0 +1,26 @@
+body {
+    background-image: url('/img/bg-b2u_3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.custom-navbar {
+    background-color: rgb(0, 0, 0, .1);
+}
+
+.modalSelectContas {
+    margin-top: -50px;
+    padding: 30px 50px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 50px -10px rgba(255,255,255,1);
+}
+
+
+#btnOpenModalSelectContas {
+    background-color: #003042;
+}
+
+
+label, option {
+    color: #003042;
+}

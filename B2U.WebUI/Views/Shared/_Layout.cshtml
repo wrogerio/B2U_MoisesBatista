@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - B2U.WebUI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link rel="stylesheet" href="~/css/libs/jquery-toast.css" />
+    <link rel="stylesheet" href="~/css/libs/jquery.dataTables.min.css"/>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @RenderSection("styles", required: false)
+</head>
+<body onbeforeunload="Load()">
+
+    <div class="loadPage text-center">
+        <img class="mt-3" src="~/img/b2u-logo.png" width="160px" alt="" />
+        <p class="fw-bold text-light">Carregando...</p>
+    </div>
+
+    <partial name="components/_header" />
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Bibliotecas -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-toast/jquery-toast.js"></script>
+    <script src="~/lib/jquery-data-table/jquery.dataTables.min.js"></script>
+    <script src="~/lib/js-particle/jquery.particleground.min.js"></script>
+    <script src="~/lib/moment/moment.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
